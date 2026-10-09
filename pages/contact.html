@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Contact Lakeisha Caterers through WhatsApp, phone or Facebook for catering enquiries and bookings.">
+
+    <title>Contact | Lakeisha Caterers</title>
+
+
+    <style>
+
+        :root {
+            --purple: #32104f;
+            --deep-purple: #1c082e;
+            --gold: #d9a52e;
+            --cream: #faf6ed;
+            --white: #ffffff;
+            --text: #332b38;
+            --muted: #716a75;
+            --whatsapp: #25D366;
+            --facebook: #1877F2;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: var(--cream);
+
+            color: var(--text);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 17px 6%;
+
+            background: rgba(28, 8, 46, 0.97);
+
+            border-bottom:
+                1px solid rgba(217, 165, 46, 0.35);
+        }
+
+
+        .brand {
+
+            color: white;
+
+            font-size: 1.35rem;
+
+            font-weight: 800;
+        }
+
+
+        .brand span {
+            color: var(--gold);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 27px;
+
+            list-style: none;
+        }
+
+
+        .nav-links a {
+
+            color: white;
+
+            font-size: 0.94rem;
+
+            font-weight: 600;
+
+            transition: 0.25s;
+        }
+
+
+        .nav-links a:hover,
+        .nav-links a.active {
+
+            color: var(--gold);
+        }
+
+
+        .menu-toggle {
+
+            display: none;
+
+            background: none;
+
+            border: none;
+
+            color: white;
+
+            font-size: 28px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .page-hero {
+
+            min-height: 340px;
+
+            display: grid;
+
+            place-items: center;
+
+            padding: 65px 6%;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+
+                linear-gradient(
+                    rgba(28, 8, 46, 0.70),
+                    rgba(28, 8, 46, 0.84)
+                ),
+
+                url("../assets/images/hero/hero.jpg")
+                center/cover;
+        }
+
+
+        .eyebrow {
+
+            color: var(--gold);
+
+            text-transform: uppercase;
+
+            font-size: 0.8rem;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+        }
+
+
+        .page-hero h1 {
+
+            font-size:
+                clamp(2.5rem, 5vw, 4.1rem);
+
+            line-height: 1.1;
+
+            margin: 12px 0 15px;
+        }
+
+
+        .page-hero p {
+
+            color: #eee5f2;
+
+            font-size: 1.05rem;
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================== */
+
+        .contact-section {
+
+            padding: 80px 6%;
+        }
+
+
+        .contact-wrapper {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+
+        .contact-info h2 {
+
+            color: var(--purple);
+
+            font-size:
+                clamp(1.9rem, 3vw, 2.6rem);
+
+            line-height: 1.2;
+
+            margin: 10px 0 18px;
+        }
+
+
+        .contact-info > p {
+
+            color: var(--muted);
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           CONTACT CARDS
+        ========================== */
+
+        .contact-card {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            padding: 20px;
+
+            margin-bottom: 15px;
+
+            background: white;
+
+            border: 1px solid #eee4d4;
+
+            border-radius: 13px;
+
+            transition: 0.25s;
+        }
+
+
+        .contact-card:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(35, 15, 45, 0.09);
+        }
+
+
+        .contact-icon {
+
+            width: 52px;
+
+            height: 52px;
+
+            flex-shrink: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            font-size: 1.35rem;
+
+            color: white;
+        }
+
+
+        .whatsapp-icon {
+            background: var(--whatsapp);
+        }
+
+
+        .phone-icon {
+            background: var(--purple);
+        }
+
+
+        .facebook-icon {
+            background: var(--facebook);
+        }
+
+
+        .contact-card h3 {
+
+            color: var(--purple);
+
+            font-size: 1rem;
+
+            margin-bottom: 2px;
+        }
+
+
+        .contact-card a,
+        .contact-card span {
+
+            color: var(--muted);
+
+            font-size: 0.95rem;
+
+            word-break: break-word;
+        }
+
+
+        /* =========================
+           CONTACT ACTION AREA
+        ========================== */
+
+        .contact-action {
+
+            padding: 45px 35px;
+
+            border-radius: 18px;
+
+            color: white;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    var(--purple),
+                    var(--deep-purple)
+                );
+
+            box-shadow:
+                0 15px 35px rgba(35, 10, 50, 0.15);
+        }
+
+
+        .contact-action h2 {
+
+            font-size:
+                clamp(1.7rem, 3vw, 2.4rem);
+
+            margin-bottom: 13px;
+        }
+
+
+        .contact-action p {
+
+            color: #ddd2e4;
+
+            margin-bottom: 28px;
+        }
+
+
+        .action-buttons {
+
+            display: grid;
+
+            gap: 13px;
+        }
+
+
+        .action-button {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 14px 20px;
+
+            border-radius: 30px;
+
+            font-weight: 700;
+
+            transition: 0.25s;
+        }
+
+
+        .action-button:hover {
+
+            transform: translateY(-2px);
+        }
+
+
+        .action-whatsapp {
+
+            background: var(--whatsapp);
+
+            color: white;
+        }
+
+
+        .action-phone {
+
+            background: var(--gold);
+
+            color: var(--deep-purple);
+        }
+
+
+        .action-facebook {
+
+            background: var(--facebook);
+
+            color: white;
+        }
+
+
+        /* =========================
+           FACEBOOK INFO
+        ========================== */
+
+        .facebook-section {
+
+            padding: 70px 6%;
+
+            text-align: center;
+
+            background: white;
+        }
+
+
+        .facebook-content {
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        .facebook-content h2 {
+
+            color: var(--purple);
+
+            font-size:
+                clamp(1.8rem, 3vw, 2.5rem);
+
+            margin: 10px 0 15px;
+        }
+
+
+        .facebook-content p {
+
+            color: var(--muted);
+
+            margin-bottom: 25px;
+        }
+
+
+        .facebook-button {
+
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            border-radius: 30px;
+
+            background: var(--facebook);
+
+            color: white;
+
+            font-weight: 700;
+
+            transition: 0.25s;
+        }
+
+
+        .facebook-button:hover {
+
+            transform: translateY(-2px);
+
+            opacity: 0.92;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+
+            padding: 28px 6%;
+
+            text-align: center;
+
+            background: #12051e;
+
+            color: #d9cedf;
+
+            font-size: 0.9rem;
+        }
+
+
+        footer strong {
+
+            color: var(--gold);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+
+            .nav-links {
+
+                position: absolute;
+
+                top: 100%;
+
+                left: 0;
+
+                width: 100%;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 0;
+
+                background: var(--deep-purple);
+            }
+
+
+            .nav-links.show {
+                display: flex;
+            }
+
+
+            .nav-links li {
+                text-align: center;
+            }
+
+
+            .nav-links a {
+
+                display: block;
+
+                padding: 14px;
+            }
+
+
+            .contact-wrapper {
+
+                grid-template-columns: 1fr;
+
+                max-width: 600px;
+            }
+
+
+            .contact-action {
+
+                padding: 35px 25px;
+            }
+        }
+
+
+        @media (max-width: 450px) {
+
+            .contact-section {
+
+                padding: 60px 5%;
+            }
+
+
+            .contact-card {
+
+                padding: 16px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <a href="../index.html"
+           class="brand">
+
+            Lakeisha <span>Caterers</span>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation">
+
+            ☰
+
+        </button>
+
+
+        <ul
+            class="nav-links"
+            id="navLinks">
+
+            <li>
+                <a href="../index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="gallery.html">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html"
+                   class="active">
+
+                    Contact
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="page-hero">
+
+        <div>
+
+            <span class="eyebrow">
+                Get in Touch
+            </span>
+
+            <h1>
+                Contact Us
+            </h1>
+
+            <p>
+                Ready to plan your next occasion?
+                Talk to Lakeisha Caterers today.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact-section">
+
+        <div class="contact-wrapper">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <span class="eyebrow">
+                    Lakeisha Caterers
+                </span>
+
+
+                <h2>
+                    Let's Talk About Your Event
+                </h2>
+
+
+                <p>
+                    Whether you are planning a wedding,
+                    Ruracio, family reunion, birthday,
+                    church event or another special
+                    occasion, get in touch with us.
+                </p>
+
+
+                <!-- WHATSAPP -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon whatsapp-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            WhatsApp
+                        </h3>
+
+                        <a
+                            href="https://wa.me/254710106057"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            0710 106 057
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE 1 -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon phone-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <a href="tel:+254710106057">
+
+                            0710 106 057
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE 2 -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon phone-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <a href="tel:+254757377796">
+
+                            0757 377 796
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FACEBOOK -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon facebook-icon">
+                        f
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Facebook
+                        </h3>
+
+                        <span>
+                            Lakeisha caterers lyzza Lakeisha
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACTION PANEL -->
+
+            <div class="contact-action">
+
+                <span class="eyebrow">
+                    Contact Lakeisha
+                </span>
+
+
+                <h2>
+                    Choose How You'd Like to Reach Us
+                </h2>
+
+
+                <p>
+                    Send us a WhatsApp message, give us
+                    a call or visit our Facebook page.
+                </p>
+
+
+                <div class="action-buttons">
+
+
+                    <!-- WHATSAPP -->
+
+                    <a
+                        href="https://wa.me/254710106057?text=Hello%20Lakeisha%20Caterers%2C%20I%20would%20like%20to%20enquire%20about%20your%20catering%20services."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="action-button action-whatsapp">
+
+                        💬 WhatsApp Lakeisha Caterers
+
+                    </a>
+
+
+                    <!-- CALL 1 -->
+
+                    <a
+                        href="tel:+254710106057"
+                        class="action-button action-phone">
+
+                        ☎ Call 0710 106 057
+
+                    </a>
+
+
+                    <!-- CALL 2 -->
+
+                    <a
+                        href="tel:+254757377796"
+                        class="action-button action-phone">
+
+                        ☎ Call 0757 377 796
+
+                    </a>
+
+
+                    <!-- FACEBOOK -->
+
+                    <a
+                        href="https://www.facebook.com/search/pages/?q=Lakeisha%20caterers%20lyzza%20Lakeisha"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="action-button action-facebook">
+
+                        f View Lakeisha on Facebook
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FACEBOOK
+    ========================== -->
+
+    <section class="facebook-section">
+
+        <div class="facebook-content">
+
+            <span class="eyebrow">
+                Follow Lakeisha
+            </span>
+
+
+            <h2>
+                Find Us on Facebook
+            </h2>
+
+
+            <p>
+                Visit the Lakeisha caterers lyzza Lakeisha
+                Facebook presence to see updates, events,
+                food and more.
+            </p>
+
+
+            <a
+                href="https://www.facebook.com/search/pages/?q=Lakeisha%20caterers%20lyzza%20Lakeisha"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="facebook-button">
+
+                f &nbsp; View Facebook Page
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026
+        <strong>Lakeisha Caterers</strong>.
+        All Rights Reserved.
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    navLinks.classList.toggle("show");
+
+                menuToggle.textContent =
+                    isOpen ? "✕" : "☰";
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        navLinks.classList.remove("show");
+
+                        menuToggle.textContent = "☰";
+
+                    }
+                );
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

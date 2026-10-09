@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Discover Lakeisha Caterers, offering catering for weddings, ruracios, family reunions, birthdays and other special occasions.">
+
+    <title>About Us | Lakeisha Caterers</title>
+
+    <style>
+        :root {
+            --purple: #32104f;
+            --deep-purple: #1c082e;
+            --gold: #d9a52e;
+            --cream: #faf6ed;
+            --white: #ffffff;
+            --text: #332b38;
+            --muted: #716a75;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 17px 6%;
+            background: rgba(28, 8, 46, 0.97);
+            border-bottom: 1px solid rgba(217, 165, 46, 0.35);
+        }
+
+        .brand {
+            color: var(--white);
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+
+        .brand span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-size: 0.94rem;
+            font-weight: 600;
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--gold);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 0;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* PAGE INTRO */
+
+        .page-intro {
+            position: relative;
+            min-height: 330px;
+            display: grid;
+            place-items: center;
+            padding: 65px 6%;
+            text-align: center;
+            color: white;
+            background:
+                linear-gradient(
+                    rgba(28, 8, 46, 0.76),
+                    rgba(28, 8, 46, 0.82)
+                ),
+                url("../assets/images/hero/hero.jpg") center/cover;
+        }
+
+        .intro-content {
+            max-width: 760px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+        }
+
+        .page-intro h1 {
+            margin: 12px 0;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.15;
+        }
+
+        .page-intro p {
+            color: #eee5f2;
+            font-size: 1.05rem;
+        }
+
+        /* GENERAL SECTIONS */
+
+        .section {
+            padding: 85px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 45px;
+        }
+
+        .section-heading h2 {
+            color: var(--purple);
+            font-size: clamp(1.9rem, 3vw, 2.6rem);
+            line-height: 1.25;
+            margin: 10px 0 15px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        /* ABOUT STORY */
+
+        .story {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 65px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .story-image {
+            position: relative;
+            padding: 0 18px 18px 0;
+        }
+
+        .story-image::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 75%;
+            height: 75%;
+            background: var(--gold);
+            border-radius: 12px;
+        }
+
+        .story-image img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 440px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 12px 35px rgba(35, 15, 45, 0.12);
+        }
+
+        .story-content h2 {
+            color: var(--purple);
+            font-size: clamp(2rem, 3vw, 2.7rem);
+            line-height: 1.2;
+            margin: 12px 0 20px;
+        }
+
+        .story-content p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .gold-line {
+            width: 75px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        /* VALUES */
+
+        .values-section {
+            background: var(--white);
+        }
+
+        .values-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .value-card {
+            padding: 32px 25px;
+            background: var(--cream);
+            border: 1px solid #eee5d7;
+            border-radius: 14px;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(45, 15, 65, 0.09);
+        }
+
+        .value-icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            background: var(--purple);
+            color: var(--gold);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+        }
+
+        .value-card h3 {
+            color: var(--purple);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* SECOND IMAGE AND OCCASIONS */
+
+        .experience {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .experience-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 14px 35px rgba(35, 15, 45, 0.12);
+        }
+
+        .experience-content h2 {
+            color: var(--purple);
+            font-size: clamp(1.9rem, 3vw, 2.5rem);
+            line-height: 1.25;
+            margin: 12px 0 18px;
+        }
+
+        .experience-content p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .occasion-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 25px 0;
+            list-style: none;
+        }
+
+        .occasion-list li {
+            color: var(--purple);
+            font-weight: 700;
+            font-size: 0.92rem;
+        }
+
+        .occasion-list li::before {
+            content: "✦";
+            color: var(--gold);
+            margin-right: 9px;
+        }
+
+        /* MOTTO BANNER */
+
+        .motto {
+            padding: 65px 7%;
+            text-align: center;
+            background:
+                linear-gradient(
+                    rgba(35, 8, 57, 0.94),
+                    rgba(35, 8, 57, 0.94)
+                ),
+                url("../assets/images/hero/hero.jpg") center/cover;
+            color: white;
+        }
+
+        .motto h2 {
+            max-width: 850px;
+            margin: 12px auto 18px;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            line-height: 1.3;
+        }
+
+        .motto h2 span {
+            color: var(--gold);
+        }
+
+        .motto p {
+            color: #e4d9eb;
+        }
+
+        /* CONTACT CTA */
+
+        .cta {
+            padding: 75px 6%;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: var(--purple);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            max-width: 650px;
+            color: var(--muted);
+            margin: 0 auto 25px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--purple);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--deep-purple);
+        }
+
+        .btn-secondary {
+            background: var(--gold);
+            color: var(--deep-purple);
+        }
+
+        .btn-secondary:hover {
+            background: #e8bc53;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 28px 6%;
+            background: var(--deep-purple);
+            color: #d9cedf;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: var(--gold);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+            .navbar {
+                padding: 16px 5%;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                background: var(--deep-purple);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 14px;
+            }
+
+            .story,
+            .experience {
+                grid-template-columns: 1fr;
+                gap: 38px;
+            }
+
+            .story-image {
+                max-width: 600px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .story-image img,
+            .experience-image img {
+                height: 380px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+                max-width: 550px;
+            }
+
+            .section {
+                padding: 65px 6%;
+            }
+
+            .experience-image {
+                order: 2;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand {
+                font-size: 1.1rem;
+            }
+
+            .page-intro {
+                min-height: 290px;
+                padding: 55px 6%;
+            }
+
+            .page-intro p {
+                font-size: 0.96rem;
+            }
+
+            .story-image img,
+            .experience-image img {
+                height: 300px;
+            }
+
+            .occasion-list {
+                grid-template-columns: 1fr;
+            }
+
+            .value-card {
+                padding: 27px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+        <a href="../index.html" class="brand">
+            Lakeisha <span>Caterers</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- PAGE INTRO -->
+
+    <header class="page-intro">
+        <div class="intro-content">
+            <span class="eyebrow">Welcome to Lakeisha</span>
+            <h1>About Us</h1>
+            <p>
+                Bringing people together through food, thoughtful
+                service and memorable occasions.
+            </p>
+        </div>
+    </header>
+
+    <!-- OUR STORY -->
+
+    <main>
+        <section class="section">
+            <div class="story">
+
+                <div class="story-image">
+                    <img
+                        src="../assets/images/about/about-01.jpg"
+                        alt="Lakeisha Caterers food and catering presentation"
+                        loading="lazy">
+                </div>
+
+                <div class="story-content">
+                    <span class="eyebrow">Who We Are</span>
+                    <h2>Making Your Special Occasions Memorable</h2>
+                    <div class="gold-line"></div>
+
+                    <p>
+                        At Lakeisha Caterers, we believe food is an
+                        important part of bringing people together.
+                        Every celebration deserves care, good food
+                        and attention to the details that make the
+                        occasion special.
+                    </p>
+
+                    <p>
+                        From weddings and ruracios to family reunions,
+                        birthdays and church events, we aim to help
+                        make your gathering a memorable experience.
+                    </p>
+
+                    <p>
+                        Whether you are planning a large celebration
+                        or a gathering with family and friends, get
+                        in touch with us to discuss your catering needs.
+                    </p>
+
+                    <a class="btn btn-primary"
+                       href="services.html">
+                        Explore Our Services
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- OUR VALUES -->
+
+        <section class="section values-section">
+            <div class="section-heading">
+                <span class="eyebrow">What Matters to Us</span>
+                <h2>Our Commitment to You</h2>
+                <p>
+                    The principles behind our approach to catering
+                    and serving your special occasions.
+                </p>
+            </div>
+
+            <div class="values-grid">
+
+                <article class="value-card">
+                    <div class="value-icon" aria-hidden="true">✦</div>
+                    <h3>Quality First</h3>
+                    <p>
+                        We put quality at the heart of our approach
+                        to food and catering service.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-icon" aria-hidden="true">♡</div>
+                    <h3>Every Occasion Matters</h3>
+                    <p>
+                        We recognise that every event is meaningful
+                        and deserves thoughtful preparation.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-icon" aria-hidden="true">♧</div>
+                    <h3>Service with Care</h3>
+                    <p>
+                        We aim to make planning your catering
+                        arrangements a straightforward experience.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- OCCASIONS -->
+
+        <section class="section">
+            <div class="experience">
+
+                <div class="experience-content">
+                    <span class="eyebrow">For Your Celebrations</span>
+                    <h2>There Is an Occasion for Every Gathering</h2>
+
+                    <p>
+                        Food is part of the moments we celebrate
+                        together. Lakeisha Caterers caters for a
+                        range of occasions, helping you plan the
+                        food for your special day.
+                    </p>
+
+                    <ul class="occasion-list">
+                        <li>Weddings</li>
+                        <li>Ruracios</li>
+                        <li>Family reunions</li>
+                        <li>Burials</li>
+                        <li>Birthday parties</li>
+                        <li>Baby showers</li>
+                        <li>Parental blessings</li>
+                        <li>Church-based events</li>
+                        <li>Kamwerethos</li>
+                    </ul>
+
+                    <a class="btn btn-secondary"
+                       href="services.html">
+                        View Catering Services
+                    </a>
+                </div>
+
+                <div class="experience-image">
+                    <img
+                        src="../assets/images/about/about-02.jpg"
+                        alt="A closer look at Lakeisha Caterers"
+                        loading="lazy">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BRAND MOTTO -->
+
+        <section class="motto">
+            <span class="eyebrow">The Lakeisha Promise</span>
+
+            <h2>
+                Quality Services.
+                <span>Food Is Our Priority.</span>
+            </h2>
+
+            <p>
+                Let us be part of your next special occasion.
+            </p>
+        </section>
+
+        <!-- CONTACT CALL TO ACTION -->
+
+        <section class="cta">
+            <h2>Planning an Event?</h2>
+
+            <p>
+                Tell us about your occasion and contact Lakeisha
+                Caterers to discuss your catering requirements.
+            </p>
+
+            <div class="cta-buttons">
+                <a
+                    class="btn btn-primary"
+                    href="https://wa.me/254710106057?text=Hello%20Lakeisha%20Caterers%2C%20I%20would%20like%20to%20enquire%20about%20your%20catering%20services."
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    WhatsApp Us
+                </a>
+
+                <a class="btn btn-secondary"
+                   href="tel:+254710106057">
+                    Call 0710 106 057
+                </a>
+
+                <a class="btn btn-primary"
+                   href="tel:+254757377796">
+                    Call 0757 377 796
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>
+            © 2026 <strong>Lakeisha Caterers</strong>.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("show");
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation" : "Open navigation"
+            );
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("show");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation");
+                menuToggle.textContent = "☰";
+            });
+        });
+    </script>
+
+</body>
+</html>
