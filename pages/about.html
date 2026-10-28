@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Discover Lakeisha Caterers, offering catering for weddings, ruracios, family reunions, birthdays and other special occasions.">
+          content="Discover Lakeisha Caterers in Runyenjes, Embu County. Creating memorable moments through exceptional food, professional service, and customized menus.">
 
     <title>About Us | Lakeisha Caterers</title>
 
@@ -222,11 +221,43 @@
             margin: 20px 0;
         }
 
-        /* VALUES */
+        /* MISSION & VISION GRID */
 
-        .values-section {
+        .vision-mission-section {
             background: var(--white);
         }
+
+        .vm-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .vm-card {
+            padding: 40px 30px;
+            background: var(--cream);
+            border: 1px solid #eee5d7;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(45, 15, 65, 0.05);
+        }
+
+        .vm-card h3 {
+            color: var(--purple);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .vm-card p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        /* VALUES */
 
         .values-grid {
             max-width: 1100px;
@@ -238,7 +269,7 @@
 
         .value-card {
             padding: 32px 25px;
-            background: var(--cream);
+            background: var(--white);
             border: 1px solid #eee5d7;
             border-radius: 14px;
             transition: transform 0.25s, box-shadow 0.25s;
@@ -257,7 +288,7 @@
             background: var(--purple);
             color: var(--gold);
             border-radius: 50%;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 18px;
         }
 
@@ -272,58 +303,103 @@
             font-size: 0.95rem;
         }
 
-        /* SECOND IMAGE AND OCCASIONS */
+        /* WHY CHOOSE US SECTION */
 
-        .experience {
+        .why-choose-section {
+            background: var(--white);
+        }
+
+        .why-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .why-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 22px 20px;
+            background: var(--cream);
+            border: 1px solid #eee5d7;
+            border-radius: 12px;
+        }
+
+        .why-badge {
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            background: var(--gold);
+            color: var(--deep-purple);
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 0.9rem;
+        }
+
+        .why-item p {
+            color: var(--purple);
+            font-weight: 700;
+            font-size: 0.98rem;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* TARGET CLIENTS SECTION */
+
+        .target-section {
+            background: var(--cream);
+        }
+
+        .target-container {
+            max-width: 1100px;
+            margin: auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
             gap: 60px;
-            max-width: 1200px;
-            margin: auto;
         }
 
-        .experience-image img {
+        .target-content h2 {
+            color: var(--purple);
+            font-size: clamp(1.9rem, 3vw, 2.5rem);
+            margin: 12px 0 18px;
+        }
+
+        .target-content p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .client-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            list-style: none;
+        }
+
+        .client-list li {
+            color: var(--purple);
+            font-weight: 700;
+            font-size: 0.98rem;
+            background: var(--white);
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 4px solid var(--gold);
+        }
+
+        .target-image img {
             width: 100%;
-            height: 430px;
+            height: 420px;
             object-fit: cover;
             border-radius: 14px;
             box-shadow: 0 14px 35px rgba(35, 15, 45, 0.12);
         }
 
-        .experience-content h2 {
-            color: var(--purple);
-            font-size: clamp(1.9rem, 3vw, 2.5rem);
-            line-height: 1.25;
-            margin: 12px 0 18px;
-        }
-
-        .experience-content p {
-            color: var(--muted);
-            margin-bottom: 20px;
-        }
-
-        .occasion-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 25px 0;
-            list-style: none;
-        }
-
-        .occasion-list li {
-            color: var(--purple);
-            font-weight: 700;
-            font-size: 0.92rem;
-        }
-
-        .occasion-list li::before {
-            content: "✦";
-            color: var(--gold);
-            margin-right: 9px;
-        }
-
-        /* MOTTO BANNER */
+        /* BRAND MOTTO */
 
         .motto {
             padding: 65px 7%;
@@ -459,9 +535,11 @@
             }
 
             .story,
-            .experience {
+            .vm-grid,
+            .target-container,
+            .why-grid {
                 grid-template-columns: 1fr;
-                gap: 38px;
+                gap: 25px;
             }
 
             .story-image {
@@ -471,7 +549,7 @@
             }
 
             .story-image img,
-            .experience-image img {
+            .target-image img {
                 height: 380px;
             }
 
@@ -482,10 +560,6 @@
 
             .section {
                 padding: 65px 6%;
-            }
-
-            .experience-image {
-                order: 2;
             }
         }
 
@@ -499,20 +573,13 @@
                 padding: 55px 6%;
             }
 
-            .page-intro p {
-                font-size: 0.96rem;
-            }
-
             .story-image img,
-            .experience-image img {
+            .target-image img {
                 height: 300px;
             }
 
-            .occasion-list {
-                grid-template-columns: 1fr;
-            }
-
-            .value-card {
+            .value-card,
+            .vm-card {
                 padding: 27px 22px;
             }
         }
@@ -550,8 +617,7 @@
             <span class="eyebrow">Welcome to Lakeisha</span>
             <h1>About Us</h1>
             <p>
-                Bringing people together through food, thoughtful
-                service and memorable occasions.
+                Creating Memorable Moments Through Exceptional Food and Service.
             </p>
         </div>
     </header>
@@ -570,28 +636,20 @@
                 </div>
 
                 <div class="story-content">
-                    <span class="eyebrow">Who We Are</span>
-                    <h2>Making Your Special Occasions Memorable</h2>
+                    <span class="eyebrow">Company Portfolio</span>
+                    <h2>Delivering Quality Dining Experiences</h2>
                     <div class="gold-line"></div>
 
                     <p>
-                        At Lakeisha Caterers, we believe food is an
-                        important part of bringing people together.
-                        Every celebration deserves care, good food
-                        and attention to the details that make the
-                        occasion special.
+                        Lakeisha Caterers is a catering service dedicated to providing delicious food, excellent customer service, and memorable dining experiences for every occasion. We believe that great food brings people together, creates lasting memories, and makes every celebration special.
                     </p>
 
                     <p>
-                        From weddings and ruracios to family reunions,
-                        birthdays and church events, we aim to help
-                        make your gathering a memorable experience.
+                        Our goal is to deliver quality catering services tailored to the unique needs, preferences, and budgets of our clients. Whether it is a wedding, corporate function, birthday party, family gathering, or private celebration, we strive to make every event enjoyable through our commitment to quality, presentation, and professionalism.
                     </p>
 
                     <p>
-                        Whether you are planning a large celebration
-                        or a gathering with family and friends, get
-                        in touch with us to discuss your catering needs.
+                        At Lakeisha Caterers, every event is an opportunity to serve with passion and excellence from our base in Runyenjes, Embu County.
                     </p>
 
                     <a class="btn btn-primary"
@@ -603,88 +661,170 @@
             </div>
         </section>
 
-        <!-- OUR VALUES -->
+        <!-- VISION & MISSION -->
 
-        <section class="section values-section">
-            <div class="section-heading">
-                <span class="eyebrow">What Matters to Us</span>
-                <h2>Our Commitment to You</h2>
-                <p>
-                    The principles behind our approach to catering
-                    and serving your special occasions.
-                </p>
-            </div>
-
-            <div class="values-grid">
-
-                <article class="value-card">
-                    <div class="value-icon" aria-hidden="true">✦</div>
-                    <h3>Quality First</h3>
+        <section class="section vision-mission-section">
+            <div class="vm-grid">
+                
+                <article class="vm-card">
+                    <h3><span>🎯</span> Our Vision</h3>
                     <p>
-                        We put quality at the heart of our approach
-                        to food and catering service.
+                        To become a trusted and preferred catering brand recognized for exceptional food quality, creativity, reliability, and outstanding customer satisfaction.
                     </p>
                 </article>
 
-                <article class="value-card">
-                    <div class="value-icon" aria-hidden="true">♡</div>
-                    <h3>Every Occasion Matters</h3>
+                <article class="vm-card">
+                    <h3><span>🚀</span> Our Mission</h3>
                     <p>
-                        We recognise that every event is meaningful
-                        and deserves thoughtful preparation.
-                    </p>
-                </article>
-
-                <article class="value-card">
-                    <div class="value-icon" aria-hidden="true">♧</div>
-                    <h3>Service with Care</h3>
-                    <p>
-                        We aim to make planning your catering
-                        arrangements a straightforward experience.
+                        To provide delicious, hygienically prepared meals and professional catering services that exceed customer expectations while offering value, flexibility, and memorable experiences.
                     </p>
                 </article>
 
             </div>
         </section>
 
-        <!-- OCCASIONS -->
+        <!-- OUR CORE VALUES -->
 
         <section class="section">
-            <div class="experience">
+            <div class="section-heading">
+                <span class="eyebrow">What Matters to Us</span>
+                <h2>Our Core Values</h2>
+                <p>
+                    The principles behind our approach to catering and serving your special occasions with excellence.
+                </p>
+            </div>
 
-                <div class="experience-content">
-                    <span class="eyebrow">For Your Celebrations</span>
-                    <h2>There Is an Occasion for Every Gathering</h2>
+            <div class="values-grid">
 
+                <article class="value-card">
+                    <div class="value-icon" aria-hidden="true">★</div>
+                    <h3>Quality</h3>
                     <p>
-                        Food is part of the moments we celebrate
-                        together. Lakeisha Caterers caters for a
-                        range of occasions, helping you plan the
-                        food for your special day.
+                        We prioritize fresh ingredients, excellent preparation, and delicious meals.
                     </p>
+                </article>
 
-                    <ul class="occasion-list">
-                        <li>Weddings</li>
-                        <li>Ruracios</li>
-                        <li>Family reunions</li>
-                        <li>Burials</li>
-                        <li>Birthday parties</li>
-                        <li>Baby showers</li>
-                        <li>Parental blessings</li>
-                        <li>Church-based events</li>
-                        <li>Kamwerethos</li>
-                    </ul>
+                <article class="value-card">
+                    <div class="value-icon" aria-hidden="true">🤝</div>
+                    <h3>Professionalism</h3>
+                    <p>
+                        We serve our clients with respect, courtesy, and dedication.
+                    </p>
+                </article>
 
-                    <a class="btn btn-secondary"
-                       href="services.html">
-                        View Catering Services
-                    </a>
+                <article class="value-card">
+                    <div class="value-icon" aria-hidden="true">🛡️</div>
+                    <h3>Hygiene & Safety</h3>
+                    <p>
+                        We maintain high standards of food handling, cleanliness, and preparation.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-icon" aria-hidden="true">⚡</div>
+                    <h3>Reliability</h3>
+                    <p>
+                        We aim to deliver our services efficiently and as agreed with our clients.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-icon" aria-hidden="true">♡</div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>
+                        We listen to our clients and tailor our services to their needs.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <div class="value-icon" aria-hidden="true">🎨</div>
+                    <h3>Creativity</h3>
+                    <p>
+                        We value attractive food presentation and menus that make every occasion special.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE LAKEISHA CATERERS -->
+
+        <section class="section why-choose-section">
+            <div class="section-heading">
+                <span class="eyebrow">The Lakeisha Advantage</span>
+                <h2>Why Choose Lakeisha Caterers?</h2>
+                <p>
+                    Here is why our clients trust us with their most important celebrations and events.
+                </p>
+            </div>
+
+            <div class="why-grid">
+
+                <div class="why-item">
+                    <span class="why-badge">✓</span>
+                    <p>Delicious meals prepared with care using fresh ingredients.</p>
                 </div>
 
-                <div class="experience-image">
+                <div class="why-item">
+                    <span class="why-badge">✓</span>
+                    <p>Flexible catering packages tailored to suit different budgets.</p>
+                </div>
+
+                <div class="why-item">
+                    <span class="why-badge">✓</span>
+                    <p>Meticulous attention to food presentation and serving arrangements.</p>
+                </div>
+
+                <div class="why-item">
+                    <span class="why-badge">✓</span>
+                    <p>Friendly, courteous, and highly professional customer service.</p>
+                </div>
+
+                <div class="why-item">
+                    <span class="why-badge">✓</span>
+                    <p>Diverse menu options customized for unique occasions.</p>
+                </div>
+
+                <div class="why-item">
+                    <span class="why-badge">✓</span>
+                    <p>Strict commitment to hygiene, cleanliness, and food safety.</p>
+                </div>
+
+                <div class="why-item" style="grid-column: 1 / -1;">
+                    <span class="why-badge">✓</span>
+                    <p>A genuine focus on making every single client and guest feel valued.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TARGET CLIENTS -->
+
+        <section class="section target-section">
+            <div class="target-container">
+
+                <div class="target-content">
+                    <span class="eyebrow">Who We Serve</span>
+                    <h2>Our Target Clients</h2>
+
+                    <p>
+                        Our professional catering services are designed and structured to cater to a diverse range of clients and occasions across the region:
+                    </p>
+
+                    <ul class="client-list">
+                        <li>Individuals and families</li>
+                        <li>Couples planning weddings and ruracios</li>
+                        <li>Businesses and corporate organizations</li>
+                        <li>Schools and institutions</li>
+                        <li>Churches and community organizations</li>
+                        <li>Event planners hosting special functions</li>
+                    </ul>
+                </div>
+
+                <div class="target-image">
                     <img
                         src="../assets/images/about/about-02.jpg"
-                        alt="A closer look at Lakeisha Caterers"
+                        alt="Lakeisha Caterers event presentation"
                         loading="lazy">
                 </div>
 
@@ -697,12 +837,12 @@
             <span class="eyebrow">The Lakeisha Promise</span>
 
             <h2>
-                Quality Services.
-                <span>Food Is Our Priority.</span>
+                Good Food. Great Service.
+                <span>Memorable Occasions.</span>
             </h2>
 
             <p>
-                Let us be part of your next special occasion.
+                Let us be part of your next special occasion in Runyenjes, Embu County.
             </p>
         </section>
 
@@ -712,8 +852,7 @@
             <h2>Planning an Event?</h2>
 
             <p>
-                Tell us about your occasion and contact Lakeisha
-                Caterers to discuss your catering requirements.
+                Tell us about your occasion and contact Lakeisha Caterers for bookings, quotations, and inquiries.
             </p>
 
             <div class="cta-buttons">
@@ -743,7 +882,7 @@
     <footer>
         <p>
             © 2026 <strong>Lakeisha Caterers</strong>.
-            All Rights Reserved.
+            All Rights Reserved. Runyenjes, Embu County.
         </p>
     </footer>
 

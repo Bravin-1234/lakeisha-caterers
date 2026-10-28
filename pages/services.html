@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#32104f">
 
-  <title>Our Catering Services | Lakeisha Caterers</title>
+  <title>Our Catering Services & Menus | Lakeisha Caterers</title>
 
   <meta
     name="description"
-    content="Discover catering services from Lakeisha Caterers for weddings, ruracios, birthdays, family reunions, church events and more. Contact us for your event."
+    content="Explore professional catering services and custom menu selections from Lakeisha Caterers for weddings, ruracios, corporate events, parties, and more."
   >
 
   <style>
@@ -446,10 +445,69 @@
       transform: translateX(5px);
     }
 
+    /* Menu Selection Section */
+    .menu-section {
+      background: var(--white);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .menu-category-card {
+      background: var(--cream);
+      border: 1px solid #eee5d5;
+      border-radius: var(--radius);
+      padding: 35px;
+      box-shadow: 0 6px 20px rgba(28, 8, 46, 0.04);
+    }
+
+    .menu-category-card h3 {
+      color: var(--purple);
+      font-size: 1.35rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid rgba(217, 165, 46, 0.3);
+      padding-bottom: 10px;
+    }
+
+    .menu-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .menu-list li {
+      color: var(--text);
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-list li::before {
+      content: "✦";
+      color: var(--gold);
+      font-size: 0.8rem;
+    }
+
+    .menu-note {
+      text-align: center;
+      margin-top: 35px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
     /* Food showcase */
 
     .food-section {
-      background: var(--white);
+      background: var(--cream);
     }
 
     .food-grid {
@@ -507,7 +565,7 @@
           rgba(217, 165, 46, 0.09),
           transparent 32%
         ),
-        var(--cream);
+        var(--white);
     }
 
     .inquiry-layout {
@@ -583,7 +641,7 @@
       padding: 31px;
       border: 1px solid #eee5d5;
       border-radius: 20px;
-      background: var(--white);
+      background: var(--cream);
       box-shadow: var(--shadow);
     }
 
@@ -734,6 +792,10 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
       .food-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
@@ -810,7 +872,7 @@
       }
 
       .service-card {
-        min-height: 280px;
+        min-height: auto;
         padding: 22px 18px;
       }
 
@@ -864,7 +926,6 @@
       }
 
       .service-card {
-        min-height: auto;
         padding: 24px;
       }
 
@@ -953,21 +1014,19 @@
     <!-- Hero -->
     <section class="page-hero">
       <div class="container hero-content">
-        <span class="hero-label">Made for your special moments</span>
+        <span class="hero-label">Professional Catering & Menus</span>
 
         <h1>
-          Catering for Every <span>Celebration</span>
+          Our Catering <span>Services</span>
         </h1>
 
         <p>
-          From family gatherings to life's biggest milestones, let Lakeisha
-          Caterers help make your event memorable with food and service
-          prepared with care.
+          Discover comprehensive catering solutions, custom menus, and exceptional food preparation tailored for your weddings, corporate gatherings, and special occasions.
         </p>
 
         <div class="hero-actions">
           <a class="btn btn-gold" href="#inquiry">Request a Quote <span aria-hidden="true">→</span></a>
-          <a class="btn btn-outline" href="#our-services">Explore Services</a>
+          <a class="btn btn-outline" href="#our-services">View All Services</a>
         </div>
       </div>
     </section>
@@ -975,15 +1034,12 @@
     <!-- Introduction -->
     <section class="section intro">
       <div class="container intro-content">
-        <span class="eyebrow">Welcome to Lakeisha Caterers</span>
+        <span class="eyebrow">Tailored For Your Needs</span>
 
-        <h2>Good Food. Meaningful Moments. Beautiful Celebrations.</h2>
+        <h2>Excellence in Every Meal and Event Arrangement</h2>
 
         <p>
-          Every occasion deserves thoughtful preparation and a welcoming
-          experience. Whether you're planning a wedding, a traditional
-          ceremony, a birthday party or a church gathering, we're here to
-          discuss your catering needs and help you plan for your guests.
+          At Lakeisha Caterers, we work closely with our clients to understand their expectations, agree on suitable menus, plan professional service arrangements, and provide a catering experience that reflects the importance of their occasion.
         </p>
 
         <div class="intro-highlight">
@@ -992,28 +1048,81 @@
       </div>
     </section>
 
-    <!-- Services -->
+    <!-- Services Grid -->
     <section class="section services-section" id="our-services">
       <div class="container">
         <div class="section-heading">
-          <span class="eyebrow">What We Cater For</span>
-          <h2>Our Catering Services</h2>
+          <span class="eyebrow">What We Offer</span>
+          <h2>Our Complete Range of Services</h2>
           <p>
-            Tell us about your occasion and we'll discuss the arrangements
-            that best suit your event, guests and requirements.
+            From family celebrations and traditional milestones to corporate functions and tailored menus.
           </p>
         </div>
 
         <div class="services-grid">
 
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
-            <h3>Family Reunions</h3>
+            <div class="service-icon" aria-hidden="true">💍</div>
+            <h3>Wedding Catering</h3>
             <p>
-              Bring family together over a shared meal and thoughtful
-              catering for your reunion.
+              We help make weddings memorable by providing carefully prepared meals, appealing food presentation, and catering arrangements suited to the couple's preferences.
             </p>
-            <a class="service-link" href="#inquiry" data-service="Family Reunions">
+            <a class="service-link" href="#inquiry" data-service="Weddings">
+              Inquire about this service <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🏢</div>
+            <h3>Corporate Catering</h3>
+            <p>
+              We provide catering solutions for meetings, conferences, seminars, workshops, staff events, and corporate celebrations.
+            </p>
+            <a class="service-link" href="#inquiry" data-service="Corporate Catering">
+              Inquire about this service <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🥳</div>
+            <h3>Private Parties & Celebrations</h3>
+            <p>
+              We cater for birthdays, anniversaries, graduations, family gatherings, bridal showers, and other special private occasions.
+            </p>
+            <a class="service-link" href="#inquiry" data-service="Birthday Parties">
+              Inquire about this service <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🍽️</div>
+            <h3>Buffet Services</h3>
+            <p>
+              We offer professional buffet-style catering with a selection of dishes arranged to provide guests with an enjoyable and convenient dining experience.
+            </p>
+            <a class="service-link" href="#inquiry" data-service="Buffet Services">
+              Inquire about this service <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🌳</div>
+            <h3>Outdoor & Event Catering</h3>
+            <p>
+              We provide catering for suitable outdoor functions, community gatherings, celebrations, and other events based on your exact requirements.
+            </p>
+            <a class="service-link" href="#inquiry" data-service="Outdoor and Event Catering">
+              Inquire about this service <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">📋</div>
+            <h3>Customized Menus</h3>
+            <p>
+              We work with clients to develop personalized menus that reflect their tastes, event themes, guest counts, and budgets.
+            </p>
+            <a class="service-link" href="#inquiry" data-service="Customized Menus">
               Inquire about this service <span aria-hidden="true">→</span>
             </a>
           </article>
@@ -1022,8 +1131,7 @@
             <div class="service-icon" aria-hidden="true">🤝</div>
             <h3>Ruracios</h3>
             <p>
-              Catering for traditional introduction and family celebration
-              ceremonies, planned around your occasion.
+              Catering for traditional introduction and family celebration ceremonies, planned around your specific occasion.
             </p>
             <a class="service-link" href="#inquiry" data-service="Ruracios">
               Inquire about this service <span aria-hidden="true">→</span>
@@ -1031,23 +1139,21 @@
           </article>
 
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">💍</div>
-            <h3>Weddings</h3>
+            <div class="service-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
+            <h3>Family Reunions</h3>
             <p>
-              Make your special day memorable with catering arrangements
-              suited to your wedding celebration.
+              Bring family together over a shared meal and thoughtful catering designed for your family reunion.
             </p>
-            <a class="service-link" href="#inquiry" data-service="Weddings">
+            <a class="service-link" href="#inquiry" data-service="Family Reunions">
               Inquire about this service <span aria-hidden="true">→</span>
             </a>
           </article>
 
           <article class="service-card">
             <div class="service-icon" aria-hidden="true">🕊️</div>
-            <h3>Burials and Memorial Gatherings</h3>
+            <h3>Burials & Memorial Gatherings</h3>
             <p>
-              Catering support for families and guests gathering to remember
-              and honour a loved one.
+              Catering support and food arrangements for families and guests gathering to remember and honour a loved one.
             </p>
             <a class="service-link" href="#inquiry" data-service="Burials and Memorial Gatherings">
               Inquire about this service <span aria-hidden="true">→</span>
@@ -1058,8 +1164,7 @@
             <div class="service-icon" aria-hidden="true">🙏</div>
             <h3>Parental Blessings</h3>
             <p>
-              Food and catering arrangements for meaningful family occasions
-              centred on blessings and gratitude.
+              Food and catering arrangements for meaningful family occasions centred on blessings, gratitude, and traditional family bonds.
             </p>
             <a class="service-link" href="#inquiry" data-service="Parental Blessings">
               Inquire about this service <span aria-hidden="true">→</span>
@@ -1070,8 +1175,7 @@
             <div class="service-icon" aria-hidden="true">🎉</div>
             <h3>Kamwerethos</h3>
             <p>
-              Catering for your traditional family and community gathering.
-              Contact us to discuss your event requirements.
+              Authentic catering for your traditional community and family celebrations. Contact us to discuss your exact requirements.
             </p>
             <a class="service-link" href="#inquiry" data-service="Kamwerethos">
               Inquire about this service <span aria-hidden="true">→</span>
@@ -1079,35 +1183,10 @@
           </article>
 
           <article class="service-card">
-            <div class="service-icon" aria-hidden="true">🎂</div>
-            <h3>Birthday Parties</h3>
-            <p>
-              Add to your birthday celebration with catering planned around
-              your guests and the kind of party you're hosting.
-            </p>
-            <a class="service-link" href="#inquiry" data-service="Birthday Parties">
-              Inquire about this service <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <article class="service-card">
             <div class="service-icon" aria-hidden="true">🍼</div>
-            <h3>Baby Showers</h3>
+            <h3>Baby Showers & Church Events</h3>
             <p>
-              Celebrate a growing family with food arrangements for your
-              baby shower and invited guests.
-            </p>
-            <a class="service-link" href="#inquiry" data-service="Baby Showers">
-              Inquire about this service <span aria-hidden="true">→</span>
-            </a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">⛪</div>
-            <h3>Church-Based Events</h3>
-            <p>
-              Catering for church gatherings, celebrations and other
-              community events.
+              Specialized catering for baby showers, church-based gatherings, community events, and milestone celebrations.
             </p>
             <a class="service-link" href="#inquiry" data-service="Church-Based Events">
               Inquire about this service <span aria-hidden="true">→</span>
@@ -1118,6 +1197,69 @@
       </div>
     </section>
 
+    <!-- Menu Selection Showcase -->
+    <section class="section menu-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Delicious & Hygienic</span>
+          <h2>Our Menu Selection</h2>
+          <p>
+            Lakeisha Caterers tailors menu offerings to suit different occasions, dietary requirements, and customer preferences.
+          </p>
+        </div>
+
+        <div class="menu-grid">
+          
+          <div class="menu-category-card">
+            <h3><span>🍲</span> Main Dishes</h3>
+            <ul class="menu-list">
+              <li>Pilau and seasoned rice</li>
+              <li>Biryani</li>
+              <li>Chapati</li>
+              <li>Ugali</li>
+              <li>Rice and stew</li>
+              <li>Pasta and other suitable accompaniments</li>
+            </ul>
+          </div>
+
+          <div class="menu-category-card">
+            <h3><span>🥩</span> Meat & Protein Dishes</h3>
+            <ul class="menu-list">
+              <li>Beef stew</li>
+              <li>Chicken dishes</li>
+              <li>Fish dishes</li>
+              <li>Quality meat options prepared to order</li>
+            </ul>
+          </div>
+
+          <div class="menu-category-card">
+            <h3><span>🥗</span> Vegetables & Accompaniments</h3>
+            <ul class="menu-list">
+              <li>Mixed vegetables</li>
+              <li>Fresh salads</li>
+              <li>Vegetable stews</li>
+              <li>Seasonal side dishes</li>
+            </ul>
+          </div>
+
+          <div class="menu-category-card">
+            <h3><span>☕</span> Snacks & Refreshments</h3>
+            <ul class="menu-list">
+              <li>Mandazi and assorted pastries</li>
+              <li>Sandwiches</li>
+              <li>Hot tea, coffee, and refreshments</li>
+              <li>Custom snacks upon request</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <p class="menu-note">
+          * Menus are fully customized according to availability, dietary requirements, and your event's unique preferences.
+        </p>
+      </div>
+    </section>
+
     <!-- Food showcase -->
     <section class="section food-section">
       <div class="container">
@@ -1125,8 +1267,7 @@
           <span class="eyebrow">A Taste of What We Do</span>
           <h2>Food for Your Special Occasion</h2>
           <p>
-            Explore some of the food images in our collection. For menu
-            options and pricing, contact us with your event details.
+            Explore some of the food images in our collection. Contact us with your event details to plan your custom menu.
           </p>
         </div>
 
@@ -1150,21 +1291,6 @@
             <img src="../assets/images/food/food-04.jpg" alt="Food prepared for guests" loading="lazy">
             <figcaption class="food-caption">For your guests</figcaption>
           </figure>
-
-          <figure class="food-card">
-            <img src="../assets/images/food/food-05.jpg" alt="Food served for an event" loading="lazy">
-            <figcaption class="food-caption">Gather around the table</figcaption>
-          </figure>
-
-          <figure class="food-card">
-            <img src="../assets/images/food/food-06.jpg" alt="Food from the Lakeisha Caterers collection" loading="lazy">
-            <figcaption class="food-caption">Celebrations made special</figcaption>
-          </figure>
-
-          <figure class="food-card">
-            <img src="../assets/images/food/food-07.jpg" alt="Catering food display" loading="lazy">
-            <figcaption class="food-caption">Quality is our priority</figcaption>
-          </figure>
         </div>
       </div>
     </section>
@@ -1181,21 +1307,21 @@
           <p>
             Share a few details about your event. When you submit the form,
             WhatsApp will open with a prepared message that you can review
-            and send to Lakeisha Caterers.
+            and send directly to Lakeisha Caterers.
           </p>
 
           <ul class="benefit-list">
             <li>
               <span class="benefit-check" aria-hidden="true">✓</span>
-              <span>Choose the occasion you're planning.</span>
+              <span>Choose your desired catering service or custom menu.</span>
             </li>
             <li>
               <span class="benefit-check" aria-hidden="true">✓</span>
-              <span>Share your preferred date, location and estimated guest count.</span>
+              <span>Share your preferred date, location, and guest count.</span>
             </li>
             <li>
               <span class="benefit-check" aria-hidden="true">✓</span>
-              <span>Tell us any menu preferences or other requirements.</span>
+              <span>Specify your menu preferences and dietary requirements.</span>
             </li>
           </ul>
 
@@ -1240,12 +1366,17 @@
             </div>
 
             <div class="form-group full-width">
-              <label for="eventType">Type of event *</label>
+              <label for="eventType">Type of service / event *</label>
               <select id="eventType" name="eventType" required>
-                <option value="">Select your occasion</option>
-                <option value="Family Reunions">Family Reunions</option>
+                <option value="">Select your service or occasion</option>
+                <option value="Wedding Catering">Wedding Catering</option>
+                <option value="Corporate Catering">Corporate Catering</option>
+                <option value="Private Parties and Celebrations">Private Parties and Celebrations</option>
+                <option value="Buffet Services">Buffet Services</option>
+                <option value="Outdoor and Event Catering">Outdoor and Event Catering</option>
+                <option value="Customized Menus">Customized Menus</option>
                 <option value="Ruracios">Ruracios</option>
-                <option value="Weddings">Weddings</option>
+                <option value="Family Reunions">Family Reunions</option>
                 <option value="Burials and Memorial Gatherings">Burials and Memorial Gatherings</option>
                 <option value="Parental Blessings">Parental Blessings</option>
                 <option value="Kamwerethos">Kamwerethos</option>
@@ -1279,7 +1410,7 @@
                 type="text"
                 id="eventLocation"
                 name="eventLocation"
-                placeholder="Town, estate or venue"
+                placeholder="Town, estate or venue (e.g. Runyenjes, Embu)"
               >
             </div>
 
@@ -1294,11 +1425,11 @@
             </div>
 
             <div class="form-group full-width">
-              <label for="eventDetails">Additional details</label>
+              <label for="eventDetails">Additional details & menu preferences</label>
               <textarea
                 id="eventDetails"
                 name="eventDetails"
-                placeholder="Tell us about your menu preferences, event arrangements or other requirements..."
+                placeholder="Tell us about your preferred dishes (e.g. Pilau, Beef stew, Chapati), theme, or requirements..."
               ></textarea>
             </div>
 
@@ -1309,8 +1440,7 @@
           </button>
 
           <p class="form-help">
-            This form does not submit or store your information on this website.
-            It prepares a message for you to send through WhatsApp.
+            This form prepares a message for you to send through WhatsApp to Lakeisha Caterers.
           </p>
         </form>
 
@@ -1323,8 +1453,7 @@
         <h2>Planning Something <span>Special?</span></h2>
 
         <p>
-          Let's talk about your event and the catering arrangements you're
-          looking for. Contact Lakeisha Caterers to get started.
+          Let's talk about your event and the customized menus you're looking for. Contact Lakeisha Caterers to get started.
         </p>
 
         <div class="cta-actions">
@@ -1444,23 +1573,23 @@
       const details = document.getElementById("eventDetails").value.trim();
 
       if (!name || !eventType) {
-        alert("Please enter your name and select the type of event.");
+        alert("Please enter your name and select the service or event type.");
         return;
       }
 
       const messageLines = [
         "Hello Lakeisha Caterers!",
         "",
-        "I would like to inquire about catering for my event.",
+        "I would like to inquire about your catering services.",
         "",
         "Name: " + name,
         "My phone number: " + (phone || "Not provided"),
-        "Event: " + eventType,
+        "Service / Event: " + eventType,
         "Event date: " + (eventDate || "Not decided yet"),
         "Estimated guests: " + (guestCount || "Not decided yet"),
         "Event location: " + (location || "Not decided yet"),
         "Estimated budget: " + (budget || "Not specified"),
-        "Additional details: " + (details || "None provided"),
+        "Additional details & menu preferences: " + (details || "None provided"),
         "",
         "Please share your available options and quotation. Thank you!"
       ];

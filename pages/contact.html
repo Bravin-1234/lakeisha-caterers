@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Contact Lakeisha Caterers through WhatsApp, phone or Facebook for catering enquiries and bookings.">
+          content="Contact Lakeisha Caterers in Runyenjes, Embu County through WhatsApp, phone, email, Facebook or TikTok for catering enquiries and bookings.">
 
     <title>Contact | Lakeisha Caterers</title>
 
@@ -26,6 +26,7 @@
             --muted: #716a75;
             --whatsapp: #25D366;
             --facebook: #1877F2;
+            --tiktok: #000000;
         }
 
 
@@ -43,13 +44,9 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-
             background: var(--cream);
-
             color: var(--text);
-
             line-height: 1.6;
-
             overflow-x: hidden;
         }
 
@@ -64,34 +61,21 @@
         ========================== */
 
         .navbar {
-
             position: sticky;
-
             top: 0;
-
             z-index: 1000;
-
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
-
             padding: 17px 6%;
-
             background: rgba(28, 8, 46, 0.97);
-
-            border-bottom:
-                1px solid rgba(217, 165, 46, 0.35);
+            border-bottom: 1px solid rgba(217, 165, 46, 0.35);
         }
 
 
         .brand {
-
             color: white;
-
             font-size: 1.35rem;
-
             font-weight: 800;
         }
 
@@ -102,48 +86,33 @@
 
 
         .nav-links {
-
             display: flex;
-
             align-items: center;
-
             gap: 27px;
-
             list-style: none;
         }
 
 
         .nav-links a {
-
             color: white;
-
             font-size: 0.94rem;
-
             font-weight: 600;
-
             transition: 0.25s;
         }
 
 
         .nav-links a:hover,
         .nav-links a.active {
-
             color: var(--gold);
         }
 
 
         .menu-toggle {
-
             display: none;
-
             background: none;
-
             border: none;
-
             color: white;
-
             font-size: 28px;
-
             cursor: pointer;
         }
 
@@ -153,60 +122,39 @@
         ========================== */
 
         .page-hero {
-
             min-height: 340px;
-
             display: grid;
-
             place-items: center;
-
             padding: 65px 6%;
-
             text-align: center;
-
             color: white;
-
             background:
-
                 linear-gradient(
                     rgba(28, 8, 46, 0.70),
                     rgba(28, 8, 46, 0.84)
                 ),
-
-                url("../assets/images/hero/hero.jpg")
-                center/cover;
+                url("../assets/images/hero/hero.jpg") center/cover;
         }
 
 
         .eyebrow {
-
             color: var(--gold);
-
             text-transform: uppercase;
-
             font-size: 0.8rem;
-
             font-weight: 800;
-
             letter-spacing: 3px;
         }
 
 
         .page-hero h1 {
-
-            font-size:
-                clamp(2.5rem, 5vw, 4.1rem);
-
+            font-size: clamp(2.5rem, 5vw, 4.1rem);
             line-height: 1.1;
-
             margin: 12px 0 15px;
         }
 
 
         .page-hero p {
-
             color: #eee5f2;
-
             font-size: 1.05rem;
         }
 
@@ -216,45 +164,30 @@
         ========================== */
 
         .contact-section {
-
             padding: 80px 6%;
         }
 
 
         .contact-wrapper {
-
             max-width: 1100px;
-
             margin: auto;
-
             display: grid;
-
-            grid-template-columns:
-                0.9fr 1.1fr;
-
+            grid-template-columns: 0.9fr 1.1fr;
             gap: 55px;
-
             align-items: center;
         }
 
 
         .contact-info h2 {
-
             color: var(--purple);
-
-            font-size:
-                clamp(1.9rem, 3vw, 2.6rem);
-
+            font-size: clamp(1.9rem, 3vw, 2.6rem);
             line-height: 1.2;
-
             margin: 10px 0 18px;
         }
 
 
         .contact-info > p {
-
             color: var(--muted);
-
             margin-bottom: 30px;
         }
 
@@ -264,52 +197,32 @@
         ========================== */
 
         .contact-card {
-
             display: flex;
-
             align-items: center;
-
             gap: 18px;
-
             padding: 20px;
-
             margin-bottom: 15px;
-
             background: white;
-
             border: 1px solid #eee4d4;
-
             border-radius: 13px;
-
             transition: 0.25s;
         }
 
 
         .contact-card:hover {
-
             transform: translateY(-3px);
-
-            box-shadow:
-                0 10px 25px rgba(35, 15, 45, 0.09);
+            box-shadow: 0 10px 25px rgba(35, 15, 45, 0.09);
         }
 
 
         .contact-icon {
-
             width: 52px;
-
             height: 52px;
-
             flex-shrink: 0;
-
             display: grid;
-
             place-items: center;
-
             border-radius: 50%;
-
             font-size: 1.35rem;
-
             color: white;
         }
 
@@ -324,28 +237,38 @@
         }
 
 
+        .email-icon {
+            background: var(--gold);
+            color: var(--deep-purple);
+        }
+
+
+        .location-icon {
+            background: #b85d18;
+        }
+
+
         .facebook-icon {
             background: var(--facebook);
         }
 
 
+        .tiktok-icon {
+            background: var(--tiktok);
+        }
+
+
         .contact-card h3 {
-
             color: var(--purple);
-
             font-size: 1rem;
-
             margin-bottom: 2px;
         }
 
 
         .contact-card a,
         .contact-card span {
-
             color: var(--muted);
-
             font-size: 0.95rem;
-
             word-break: break-word;
         }
 
@@ -355,165 +278,146 @@
         ========================== */
 
         .contact-action {
-
             padding: 45px 35px;
-
             border-radius: 18px;
-
             color: white;
-
             background:
-
                 linear-gradient(
                     135deg,
                     var(--purple),
                     var(--deep-purple)
                 );
-
-            box-shadow:
-                0 15px 35px rgba(35, 10, 50, 0.15);
+            box-shadow: 0 15px 35px rgba(35, 10, 50, 0.15);
         }
 
 
         .contact-action h2 {
-
-            font-size:
-                clamp(1.7rem, 3vw, 2.4rem);
-
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
             margin-bottom: 13px;
         }
 
 
         .contact-action p {
-
             color: #ddd2e4;
-
             margin-bottom: 28px;
         }
 
 
         .action-buttons {
-
             display: grid;
-
             gap: 13px;
         }
 
 
         .action-button {
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             gap: 10px;
-
             padding: 14px 20px;
-
             border-radius: 30px;
-
             font-weight: 700;
-
             transition: 0.25s;
         }
 
 
         .action-button:hover {
-
             transform: translateY(-2px);
         }
 
 
         .action-whatsapp {
-
             background: var(--whatsapp);
-
             color: white;
         }
 
 
         .action-phone {
-
             background: var(--gold);
-
             color: var(--deep-purple);
         }
 
 
+        .action-email {
+            background: white;
+            color: var(--purple);
+        }
+
+
         .action-facebook {
-
             background: var(--facebook);
-
             color: white;
+        }
+
+
+        .action-tiktok {
+            background: #111111;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
 
         /* =========================
-           FACEBOOK INFO
+           SOCIAL SECTION (FACEBOOK & TIKTOK)
         ========================== */
 
-        .facebook-section {
-
+        .social-section {
             padding: 70px 6%;
-
             text-align: center;
-
             background: white;
         }
 
 
-        .facebook-content {
-
+        .social-content {
             max-width: 700px;
-
             margin: auto;
         }
 
 
-        .facebook-content h2 {
-
+        .social-content h2 {
             color: var(--purple);
-
-            font-size:
-                clamp(1.8rem, 3vw, 2.5rem);
-
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
             margin: 10px 0 15px;
         }
 
 
-        .facebook-content p {
-
+        .social-content p {
             color: var(--muted);
-
             margin-bottom: 25px;
         }
 
 
-        .facebook-button {
+        .social-buttons-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
+
+        .social-btn {
             display: inline-block;
-
             padding: 14px 28px;
-
             border-radius: 30px;
-
-            background: var(--facebook);
-
             color: white;
-
             font-weight: 700;
-
             transition: 0.25s;
         }
 
 
-        .facebook-button:hover {
-
+        .social-btn:hover {
             transform: translateY(-2px);
-
             opacity: 0.92;
+        }
+
+
+        .btn-fb {
+            background: var(--facebook);
+        }
+
+
+        .btn-tk {
+            background: #000000;
         }
 
 
@@ -522,21 +426,15 @@
         ========================== */
 
         footer {
-
             padding: 28px 6%;
-
             text-align: center;
-
             background: #12051e;
-
             color: #d9cedf;
-
             font-size: 0.9rem;
         }
 
 
         footer strong {
-
             color: var(--gold);
         }
 
@@ -546,30 +444,20 @@
         ========================== */
 
         @media (max-width: 800px) {
-
             .menu-toggle {
                 display: block;
             }
 
 
             .nav-links {
-
                 position: absolute;
-
                 top: 100%;
-
                 left: 0;
-
                 width: 100%;
-
                 display: none;
-
                 flex-direction: column;
-
                 align-items: stretch;
-
                 gap: 0;
-
                 background: var(--deep-purple);
             }
 
@@ -585,38 +473,30 @@
 
 
             .nav-links a {
-
                 display: block;
-
                 padding: 14px;
             }
 
 
             .contact-wrapper {
-
                 grid-template-columns: 1fr;
-
                 max-width: 600px;
             }
 
 
             .contact-action {
-
                 padding: 35px 25px;
             }
         }
 
 
         @media (max-width: 450px) {
-
             .contact-section {
-
                 padding: 60px 5%;
             }
 
 
             .contact-card {
-
                 padding: 16px;
             }
         }
@@ -658,36 +538,24 @@
             id="navLinks">
 
             <li>
-                <a href="../index.html">
-                    Home
-                </a>
+                <a href="../index.html">Home</a>
             </li>
 
             <li>
-                <a href="about.html">
-                    About
-                </a>
+                <a href="about.html">About</a>
             </li>
 
             <li>
-                <a href="services.html">
-                    Services
-                </a>
+                <a href="services.html">Services</a>
             </li>
 
             <li>
-                <a href="gallery.html">
-                    Gallery
-                </a>
+                <a href="gallery.html">Gallery</a>
             </li>
 
             <li>
                 <a href="contact.html"
-                   class="active">
-
-                    Contact
-
-                </a>
+                   class="active">Contact</a>
             </li>
 
         </ul>
@@ -748,7 +616,7 @@
                     Whether you are planning a wedding,
                     Ruracio, family reunion, birthday,
                     church event or another special
-                    occasion, get in touch with us.
+                    occasion, get in touch with us in Runyenjes, Embu County.
                 </p>
 
 
@@ -762,17 +630,13 @@
 
                     <div>
 
-                        <h3>
-                            WhatsApp
-                        </h3>
+                        <h3>WhatsApp</h3>
 
                         <a
                             href="https://wa.me/254710106057"
                             target="_blank"
                             rel="noopener noreferrer">
-
                             0710 106 057
-
                         </a>
 
                     </div>
@@ -790,14 +654,10 @@
 
                     <div>
 
-                        <h3>
-                            Phone
-                        </h3>
+                        <h3>Phone</h3>
 
                         <a href="tel:+254710106057">
-
                             0710 106 057
-
                         </a>
 
                     </div>
@@ -815,15 +675,53 @@
 
                     <div>
 
-                        <h3>
-                            Phone
-                        </h3>
+                        <h3>Phone (Alt)</h3>
 
                         <a href="tel:+254757377796">
-
                             0757 377 796
-
                         </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon email-icon">
+                        ✉
+                    </div>
+
+                    <div>
+
+                        <h3>Email</h3>
+
+                        <a href="mailto:njerilizzah24@gmail.com">
+                            njerilizzah24@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon location-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h3>Location</h3>
+
+                        <span>
+                            Runyenjes, Embu County
+                        </span>
 
                     </div>
 
@@ -840,13 +738,36 @@
 
                     <div>
 
-                        <h3>
-                            Facebook
-                        </h3>
+                        <h3>Facebook</h3>
 
-                        <span>
-                            Lakeisha caterers lyzza Lakeisha
-                        </span>
+                        <a href="https://www.facebook.com/share/1CtLfyQJkV/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Lakeisha Caterers
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIKTOK -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon tiktok-icon">
+                        ♪
+                    </div>
+
+                    <div>
+
+                        <h3>TikTok</h3>
+
+                        <a href="https://www.tiktok.com/@lakeishacateringservices"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            @lakeishacateringservices
+                        </a>
 
                     </div>
 
@@ -871,12 +792,11 @@
 
                 <p>
                     Send us a WhatsApp message, give us
-                    a call or visit our Facebook page.
+                    a call, send an email, or check our social media pages.
                 </p>
 
 
                 <div class="action-buttons">
-
 
                     <!-- WHATSAPP -->
 
@@ -885,9 +805,7 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         class="action-button action-whatsapp">
-
                         💬 WhatsApp Lakeisha Caterers
-
                     </a>
 
 
@@ -896,9 +814,7 @@
                     <a
                         href="tel:+254710106057"
                         class="action-button action-phone">
-
                         ☎ Call 0710 106 057
-
                     </a>
 
 
@@ -907,22 +823,38 @@
                     <a
                         href="tel:+254757377796"
                         class="action-button action-phone">
-
                         ☎ Call 0757 377 796
+                    </a>
 
+
+                    <!-- EMAIL -->
+
+                    <a
+                        href="mailto:njerilizzah24@gmail.com"
+                        class="action-button action-email">
+                        ✉ Email njerilizzah24@gmail.com
                     </a>
 
 
                     <!-- FACEBOOK -->
 
                     <a
-                        href="https://www.facebook.com/search/pages/?q=Lakeisha%20caterers%20lyzza%20Lakeisha"
+                        href="https://www.facebook.com/share/1CtLfyQJkV/"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="action-button action-facebook">
+                        f Visit Facebook Page
+                    </a>
 
-                        f View Lakeisha on Facebook
 
+                    <!-- TIKTOK -->
+
+                    <a
+                        href="https://www.tiktok.com/@lakeishacateringservices"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="action-button action-tiktok">
+                        ♪ Watch on TikTok
                     </a>
 
                 </div>
@@ -935,39 +867,47 @@
 
 
     <!-- =========================
-         FACEBOOK
+         SOCIAL MEDIA SHOWCASE
     ========================== -->
 
-    <section class="facebook-section">
+    <section class="social-section">
 
-        <div class="facebook-content">
+        <div class="social-content">
 
             <span class="eyebrow">
-                Follow Lakeisha
+                Stay Connected
             </span>
 
 
             <h2>
-                Find Us on Facebook
+                Follow Us on Social Media
             </h2>
 
 
             <p>
-                Visit the Lakeisha caterers lyzza Lakeisha
-                Facebook presence to see updates, events,
-                food and more.
+                Visit our official Facebook and TikTok pages to see our latest setups, food presentations, videos, and client events.
             </p>
 
 
-            <a
-                href="https://www.facebook.com/search/pages/?q=Lakeisha%20caterers%20lyzza%20Lakeisha"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="facebook-button">
+            <div class="social-buttons-grid">
 
-                f &nbsp; View Facebook Page
+                <a
+                    href="https://www.facebook.com/share/1CtLfyQJkV/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn btn-fb">
+                    f &nbsp; Facebook Page
+                </a>
 
-            </a>
+                <a
+                    href="https://www.tiktok.com/@lakeishacateringservices"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn btn-tk">
+                    ♪ &nbsp; TikTok Profile
+                </a>
+
+            </div>
 
         </div>
 
@@ -982,7 +922,7 @@
 
         © 2026
         <strong>Lakeisha Caterers</strong>.
-        All Rights Reserved.
+        All Rights Reserved. Runyenjes, Embu County.
 
     </footer>
 
